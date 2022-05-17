@@ -1,0 +1,205 @@
+.container .index .index-bar ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 12px;
+    row-gap: 12px;
+    box-sizing: border-box;
+}
+
+.container .index .index-bar .index-infobox{
+    background-color: #FFF;
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .index .index-bar .index-infobox .index-info-icon{
+    width: 30%;
+    background-color: #F6F5FF;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .index .index-bar .index-infobox .index-info-icon .index-icon{
+    font-size: 1.6rem;
+    color: #736cbd;
+}
+
+.container .index .index-bar .index-infobox .index-info-data{
+    width: 70%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .info-data-sum{
+    font-size: 2rem;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .info-data-text{
+    color: #9c9c9c;
+    font-size: 0.8rem;
+}
+
+.container .index .index-box {
+    margin-top: 20px;
+    display: flex;
+    height: 65vh;
+    background-color: #FFF;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container .index .index-box .active-todaybox{
+    width: 23%;
+    margin-right: 2%;
+}
+
+.container .index .index-box .index-active-box{
+    width: 75%;    
+}
+
+.container .index .index-box .active-todaybox .index-active-topic{
+    color: #736cbd;
+    margin: 15px;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.container .index .index-box .active-todaybox .activetoday p{
+    margin-bottom: 10px;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox{
+    background-color: rgb(247, 247, 247);
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox .active-info-icon{
+    width: 30%;
+    background-color: #e2dfff;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox .index-icon{
+    font-size: 1.6rem;
+    color: #736cbd;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox .active-info-data{
+    width: 70%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox .active-info-data .active-data-sum{
+    font-size: 1.5rem;
+}
+
+.container .index .index-box .active-todaybox .activetoday ul .active-infobox .active-info-data .active-data-text{
+    color: #9c9c9c;
+    font-size: 0.8rem;
+}
+
+.container .index .index-box .active-todaybox .index-active-icon{
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.container .index .index-box .index-active-box .index-active-chart{
+    width: 100% !important;
+    height: auto !important;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .index .index-bar ul {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 12px;
+        width: 100%;
+    }
+
+    .container .index .index-box {
+        margin-top: 12px;
+        display: block;
+        height: auto;
+        padding: 12px;
+    }
+
+    .container .index .index-box .active-todaybox{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .container .index .index-box .active-todaybox .activetoday ul{
+        display: flex;
+        width: 100%;
+    }
+
+    .container .index .index-box .active-todaybox .activetoday ul .active-infobox{
+        width: 100%;
+        margin-right: 12px;
+        margin-bottom: 20px;
+    }
+
+    .container .index .index-box .active-todaybox .activetoday ul .active-infobox:nth-child(3){
+        margin-right: 0;
+    }
+
+    .container .index .index-box .index-active-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .container .index .index-bar ul {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        width: 100%;
+    }
+
+    .container .index .index-box {
+        margin-top: 12px;
+        display: block;
+        height: auto;
+        padding: 12px;
+    }
+
+    .container .index .index-box .active-todaybox{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .container .index .index-box .index-active-box{
+        display: none;   
+    }
+    
+    .container .index .index-box .active-todaybox .index-active-topic{
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+

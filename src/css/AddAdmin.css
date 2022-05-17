@@ -1,0 +1,88 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono:wght@300&display=swap');
+
+.newadmin {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #695CFE;
+    display: flex;
+    font-family: 'Poppins', 'Prompt', sans-serif;
+    text-align: center;
+    background-color: #F6F5FF;
+}
+
+.newadmin *{
+    box-sizing: border-box;
+}
+
+.newadmin .logo-newadmin {
+    width: 60px;
+}
+
+.newadmin .title-name{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.newadmin .title-text{
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.newadmin .newadmin-box {
+    background-color: #FFF;
+    padding: 20px 55px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.newadmin .newadmin-box .text{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.newadmin .newadmin-box form .newadmin-img {
+    width: 90px;
+    height: 90px;
+    background-color: #F6F5FF;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.newadmin .newadmin-box form .newadmin-inputbox {
+    display: flex;
+}
+
+.newadmin .newadmin-box form .newadmin-inputbox .input-newadmin:nth-child(1) {
+    margin-right: 10px;
+}
+
+.newadmin .newadmin-box form .input-newadmin{
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.8rem;
+    border: 1px solid #695CFE;
+    border-radius: 5px;
+    background-color: #F6F5FF;
+    font-family: 'Poppins', 'Prompt', sans-serif;
+    padding: 0 5px;
+    color: #695CFE;
+}
+
+.newadmin .newadmin-box form button {
+    width: 100%;
+    line-height: 1.8rem;
+    border-radius: 5px;
+    background-color: #695CFE;
+    border: none;
+    font-size: 0.9rem;
+    font-family: 'Poppins', 'Prompt', sans-serif;
+    color: #F6F5FF;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}

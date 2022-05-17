@@ -1,0 +1,36 @@
+#page404-container {
+    background-color: #fefefe;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#page404-container h1{
+    font-size: 10rem;
+}
+
+#page404-container .icon-error img {
+    width: 7.5rem;
+}
+
+#page404-container h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#page404-container .returnhome-button {
+    border: 1px solid #695CFE;
+    padding: 8px 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #695CFE;
+}
+
+#page404-container .returnhome-button:hover {
+    background-color: #695CFE;
+    color: #fefefe;
+}

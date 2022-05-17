@@ -1,0 +1,116 @@
+.history .filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter-time {
+  width: 80%;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.filter-time span {
+  margin: 0 5rem;
+  font-size: 18px;
+}
+
+.filter-time i {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.history select {
+  width: 20%;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.table-box {
+  background-color: #fff;
+  border-radius: 8px;
+  height: 80vh;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.table-box table {
+  border-collapse: separate;
+  border-spacing: 8px;
+  width: 100%;
+}
+
+.table-box table th,
+.table-box table td {
+  padding: 2px 4px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.table-box table thead {
+  position: sticky;
+  top: 8px;
+}
+.table-box table th {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+}
+.table-box table tbody tr:hover td {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.table-box table td {
+  background-color: var(--body-color);
+}
+
+#show-month-year {
+  width: 32%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .table-box {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .history .filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .filter-time {
+    width: 50%;
+    display: flex;
+  }
+
+  .filter-time span {
+    margin: 0 0.2rem;
+    font-size: 18px;
+  }
+
+  .history select {
+    width: 50%;
+  }
+
+  .table-box {
+    font-size: 0.7rem;
+  }
+
+  #show-month-year {
+    width: 50%;
+  }
+}
+
+#null-history {
+  width: 100%;
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 40px;
+}

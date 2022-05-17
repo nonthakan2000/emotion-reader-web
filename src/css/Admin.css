@@ -1,0 +1,213 @@
+.container .adminpage .two {
+    display: none;
+}
+
+.container .adminpage .adminpage-bar {
+    margin-top: 20px ;
+    display: flex;
+}
+
+.container .adminpage .adminpage-bar .search {
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.container .adminpage .adminpage-bar .search-admin {
+    background-color: #FFF;
+    width: 450px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    display: inline;
+    box-sizing: border-box;
+}
+
+.container .adminpage .adminpage-bar .search-admin input {
+    width: 400px;
+    margin-right: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F6F5FF;
+    padding-left: 10px;
+    line-height: 35px;
+    box-sizing: border-box;
+}
+
+.container .adminpage .adminpage-bar .addmin-add-box {
+    width: 40%;
+    text-align: right;
+}
+
+.container .adminpage .adminpage-bar .addmin-add-box .add-admin {
+    color: #695CFE;
+    background-color: #FFF;
+    border: 1px solid #695CFE;
+    border-radius: 8px;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .adminpage .adminpage-bar .addmin-add-box .add-admin:hover {
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+.container .adminpage .adminpage-box {
+    margin-top: 30px;
+}
+
+.container .adminpage .adminpage-box .admin-list {
+    width: 100%;
+    /* margin-right: 3%; */
+}
+
+.container .adminpage .adminpage-box .admin-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 12px;
+    row-gap: 12px;
+    width: 100%;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card {
+    width: 100%;
+    list-style: none;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    position: relative;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .trash-admin {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.2rem;
+    color: #c2c2c2;
+    cursor: pointer;
+}
+
+.container .adminpage .adminpage-box .admin-list ul .admin-card:nth-child(1) .trash-admin {
+    display: none;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .admin-imgbox {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    box-shadow: 2px 2px 11px 2px rgba(105, 92, 254, 0.20);
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .admin-imgbox .admin-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .admin-info {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 15px;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .admin-info .admin-name {
+    color: #695CFE;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.container .adminpage .adminpage-box .admin-list .admin-card .admin-info .admin-email {
+    color: #c2c2c2;
+    font-size: 0.7rem;
+    overflow: hidden;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .adminpage .adminpage-box .admin-list ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .container .adminpage {
+       height: auto !important;
+    }
+    
+    .container .adminpage .two {
+        width: 100%;
+        text-align: right;
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    .container .adminpage .two .add-admin {
+        color: #695CFE;
+        background-color: #FFF;
+        border: 1px solid #695CFE;
+        border-radius: 8px;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container .adminpage .two .add-admin:hover {
+        background-color: #695CFE;
+        color: #FFF;
+    }
+
+    .container .adminpage .adminpage-bar {
+        display: block;
+    }
+
+    .container .adminpage .adminpage-bar .search {
+        width: 100%;
+    }
+
+    .container .adminpage .adminpage-bar .search-admin {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .container .adminpage .adminpage-bar .search-admin input {
+        width: 100%;
+        margin-right: 0;
+        line-height: 40px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .container .adminpage .adminpage-bar .addmin-add-box {
+        display: none;
+    }
+
+    .container .adminpage .adminpage-box {
+        margin-top: 12px;
+    }
+
+    .container .adminpage .adminpage-box .admin-list {
+        margin-right: 0;
+    }
+
+    .container .adminpage .adminpage-box .admin-list ul {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .container .adminpage .adminpage-box .admin-list .admin-card {
+        padding: 25px;
+    }
+}

@@ -1,0 +1,195 @@
+.container .learningcontent {
+    margin-top: 20px;
+    display: flex;
+}
+
+.container .learningcontent .learningcontent-topic{
+    width: 30%;
+    margin-right: 5%;
+}
+
+.container .learningcontent .learningcontent-mood-link .learningcontent-mood{
+    list-style: none;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.container .learningcontent .learningcontent-mood-link .learningcontent-mood:hover{
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+.container .learningcontent .learningcontent-mood-link .learningcontent-mood .mood-icon{
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.container .learningcontent .learningcontent-mood-link .learningcontent-mood .link-edit{
+    font-size: 24px;
+    position: absolute;
+    right: 30px;
+}
+
+.container .learningcontent .learningcontent-edit{
+    width: 65%;
+    background-color: #FFF;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.container .learningcontent .learningcontent-edit .mood-edit{
+    color: #695CFE;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container .learningcontent .learningcontent-edit form{
+    margin-top: 10px;
+    background-color: #F6F5FF;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.container .learningcontent .learningcontent-edit form .moodedit-topic{
+    border-bottom: 1px solid #695CFE;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.container .learningcontent .learningcontent-edit form .moodedit-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .learningcontent .learningcontent-edit form .moodedit-img-box {
+    background-color: #b3adff;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+}
+.container .learningcontent .learningcontent-edit form .moodedit-img-box .delete-icon {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #F6F5FF;
+}
+
+.container .learningcontent .learningcontent-edit form .moodedit-addimg{
+    margin-top: 10px;
+}
+
+.container .learningcontent .learningcontent-edit form .moodedit-addimg .addimg{
+    border: 1px solid #695CFE;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: #695CFE;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .learningcontent .learningcontent-edit form .moodedit-addimg .addimg:hover{
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+.container .learningcontent .learningcontent-edit form .moodedit-description{
+    margin-top: 20px;
+}
+
+.container .learningcontent .learningcontent-edit form textarea{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    padding: 5px;
+}
+
+.container .learningcontent .learningcontent-edit form button{
+    background-color: #F6F5FF;
+    border: 1px solid #695CFE;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    color: #695CFE;
+    cursor: pointer;
+    padding: 5px 30px;
+    display: block;
+    font-size: 0.7rem;
+    margin: auto;
+}
+
+.container .learningcontent .learningcontent-edit form button:hover{
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+.container .learningcontent .learningcontent-edit #updateAt-show {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+#all-image-contents, #all-image-data-add{
+    min-height: 200px;
+}
+
+.learningcontent-mood-link {
+    overflow-y: scroll !important;
+    height: 85vh;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .learningcontent .learningcontent-edit{
+        height: fit-content !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container .learningcontent {
+        margin-top: 0;
+        display: block;
+        /* height: auto !important; */
+    }
+
+    .container .learningcontent .learningcontent-topic{
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .container .learningcontent .learningcontent-topic .learningcontent-mood-link{
+        height: auto !important;
+    }
+
+    .container .learningcontent .learningcontent-mood-link .learningcontent-mood .link-edit{
+        transform: rotate(90deg);
+    }
+
+    .container .learningcontent .learningcontent-edit{
+        width: 100%;
+        padding: 12px;
+        height: auto !important;
+    }
+
+    .container .learningcontent .learningcontent-edit form{
+        margin-top: 5px;
+        background-color: #F6F5FF;
+        padding: 12px;
+    }
+}

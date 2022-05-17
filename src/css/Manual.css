@@ -1,0 +1,43 @@
+.editcontent-topic{
+    border-bottom: 1px solid #695CFE;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.editcontent-topic input{
+    width: 100%;
+    padding: 3px 6px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 3px;
+}
+.add-title-data {
+    text-align: center;
+    width: 100%;
+}
+.manual-li-topic {
+    padding: 15px 10px !important;
+}
+
+.manual-li-item {
+    height: 100%;
+    width: 80%;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.manual-topic-edit {
+    display: flex;
+    align-items: center;
+}
+.manual-delete-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+}

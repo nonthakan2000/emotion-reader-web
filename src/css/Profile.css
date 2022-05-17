@@ -1,0 +1,113 @@
+.container .profile {
+    background-color: #FFF;
+    width: 50%;
+    margin: 100px auto;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .profile .btn-editprofile {
+    text-align: right;
+}
+
+.container .profile .btn-editprofile .icon-editprofile{
+    font-size: 20px;
+}
+
+.container .profile .imgprofile {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container .profile .profile-data {
+    width: 70%;
+    margin: auto;
+}
+
+.container .profile .profile-data .data-box{
+    display: flex;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 0;
+}
+
+.container .profile .profile-data .data-box .profile-title{
+    width: 30%;
+    text-align: right;
+    margin-right: 20px;
+    color: #695CFE;
+}
+
+.container .profile .profile-data .data-box p{
+    font-size: 0.8rem;
+}
+
+.container .profile .changepassword{
+    text-align: right;
+    margin-top: 20px;
+}
+
+.container .profile .changepassword a{
+    text-decoration: none;
+    border: 1px solid #695CFE;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: #695CFE;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .profile .changepassword a:hover{
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .profile {
+        width: 80%;
+    }
+
+    .container .profile .imgprofile {
+        margin-bottom: 15px;
+    }
+
+    .container .profile .profile-data {
+        width: 70%;
+    }
+
+    .container .profile .profile-data .data-box p{
+        font-size: 0.7rem;
+    }
+
+    .container .profile .changepassword{
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container .profile {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container .profile .imgprofile {
+        margin-bottom: 15px;
+    }
+
+    .container .profile .profile-data {
+        width: 85%;
+    }
+
+    .container .profile .profile-data .data-box p{
+        font-size: 0.7rem;
+    }
+
+    .container .profile .changepassword{
+        margin-bottom: 12px;
+    }
+}

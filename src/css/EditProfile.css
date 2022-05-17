@@ -1,0 +1,186 @@
+.container .editprofile {
+    background-color: #FFF;
+    width: 50%;
+    margin: 100px auto;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .editprofile .imgeditprofile {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.container .editprofile .imgeditprofile #icon-change-image {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #695CFE;
+    cursor: pointer;
+}
+
+.container .editprofile .imgeditprofile img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container .editprofile .editprofile-data {
+    width: 70%;
+    margin: auto;
+}
+
+.container .editprofile .editprofile-data .editprofile-box {
+    display: flex;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-title {
+    width: 30%;
+    text-align: right;
+    margin-right: 20px;
+    color: #695CFE;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-input-box{
+    display: flex;
+    width: 65%;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-input-box .nameedit{
+    width: 49%;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-input-box .nameedit:nth-child(1){
+    margin-right: 2%;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-input-box .nameedit input, .container .editprofile .editprofile-data .editprofile-box .edit input {
+    width: 100%;
+    padding: 3px;
+    font-size: 0.8rem;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 3px;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .editprofile-input-box .edit-gender{
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.container .editprofile .editprofile-data .editprofile-box .edit {
+    width: 65%;
+}
+
+.container .editprofile .button-editprofile {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container .editprofile .button-editprofile .back-editprofile {
+    width: 50%;
+}
+
+.container .editprofile .button-editprofile .back-editprofile a {
+    text-decoration: none;
+    border: 1px solid #695CFE;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: #695CFE;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    width: 70px;
+    height: 32px;
+}
+
+.container .editprofile .button-editprofile .back-editprofile a:hover {
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+.container .editprofile .button-editprofile .confirm-editprofile {
+    width: 50%;
+    text-align: right;
+}
+
+.container .editprofile .button-editprofile .confirm-editprofile input {
+    text-decoration: none;
+    border: 1px solid #695CFE;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    color: #695CFE;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    width: 65px;
+    cursor: pointer;
+}
+
+.container .editprofile .button-editprofile .confirm-editprofile input:hover {
+    background-color: #695CFE;
+    color: #FFF;
+}
+
+
+#input-editprofile-email {
+    background-color: rgba(180, 180, 180, 0.2);
+}
+
+.show-none {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .editprofile {
+        width: 80%;
+        padding: 30px 20px 20px;
+    }
+
+    .container .editprofile .imgeditprofile {
+        margin-bottom: 15px;
+    }
+
+    .container .editprofile .editprofile-data {
+        width: 70%;
+    }
+
+    .container .editprofile .editprofile-data .data-box p{
+        font-size: 0.7rem;
+    }
+
+    .container .editprofile .changepassword{
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container .editprofile {
+        width: 100%;
+        padding: 15px 12px;
+        margin: auto;
+    }
+
+    .container .editprofile .imgeditprofile {
+        margin-bottom: 15px;
+    }
+
+    .container .editprofile .editprofile-data {
+        width: 95%;
+    }
+
+    .container .editprofile .editprofile-data .data-box p{
+        font-size: 0.7rem;
+    }
+
+    .container .editprofile .changepassword{
+        margin-bottom: 12px;
+    }
+}

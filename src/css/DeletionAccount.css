@@ -1,0 +1,160 @@
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.container .accountDelete .accountDelete-bar ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    column-gap: 12px;
+    row-gap: 12px;
+    box-sizing: border-box;
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox{
+    background-color: #FFF;
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .accountDelete-info-data{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 8px;
+    color: #FFF;
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .pink{
+    background-color: rgb(255, 99, 132);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .Orange{
+    background-color: rgb(255, 159, 64);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .Yellow{
+    background-color: rgb(255, 205, 86);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .Green{
+    background-color: rgb(75, 192, 192);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .Blue{
+    background-color: rgb(54, 162, 235);
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .accountDelete-info-data .info-data-sum{
+    font-size: 2rem;
+}
+
+.container .accountDelete .accountDelete-bar .accountDelete-infobox .accountDelete-info-data .info-data-text{
+    color: #FFF;
+}
+
+.container .accountDelete .accountDelete-chart-box{
+    display: flex; 
+    margin-top: 30px;
+}
+
+.container .accountDelete .accountDelete-chart-box .chart{
+    width: 50%;
+    height: 50vh;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 8px;
+    /* box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1); */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .accountDelete .accountDelete-chart-box .boxone{
+    margin-right: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container .accountDelete .accountDelete-chart-box .boxtwo{
+    margin-left: 6px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container .accountDelete .accountDelete-chart-box .boxtwo .accountDelete-boxtwo{
+    width: 65% !important;
+    height: auto !important;
+}
+
+
+/* .container .accountDelete .accountDelete-cause{
+    width: 32%;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+.container .accountDelete .accountDelete-cause .cause-toppic{
+    background-color: #F6F5FF;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    color: #736cbd;
+    margin-bottom: 10px;
+}
+
+.container .accountDelete .accountDelete-cause ul{
+    margin: 5px 20px;
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause{
+    list-style: none;
+    color: #9c9c9c;
+    font-size: 0.9rem;
+    padding: 10px 5px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .chart-icon{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .pink{
+    color: rgb(255, 99, 132);
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .Orange{
+    color: rgb(255, 159, 64);
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .Yellow{
+    color: rgb(255, 205, 86);
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .Green{
+    color: rgb(75, 192, 192);
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .Blue{
+    color: rgb(54, 162, 235);
+}
+
+.container .accountDelete .accountDelete-cause .delete-cause .cause-text:hover{
+    color: #695CFE;
+} */
+
+/* -------chart.js-------- */
+/* .container .accountDelete .accountDelete-chart-box #accountDelete-chart {
+    width: 380px !important;
+    height: auto !important;
+    object-fit: cover !important;
+} */
