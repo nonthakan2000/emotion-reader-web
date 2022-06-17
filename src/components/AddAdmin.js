@@ -49,7 +49,7 @@ function AddAdmin(props) {
       lname: lname.current.value,
       phone: phone.current.value,
       email: emails,
-      position: 'admin',
+      position: "admin",
       status: true,
     };
 
@@ -455,27 +455,9 @@ function AddAdmin(props) {
               );
             }
           })
-          .catch((error) => {
-            if (error) {
-              Swal.fire({
-                icon: "error",
-                title: "ทำรายการไม่สำเร็จ",
-                text: "กรุณาทำรายการใหม่อีกครั้ง",
-                confirmButtonText: "ตกลง",
-              });
-            }
-          });
+          .catch((error) => {});
       }
-    } catch (error) {
-      if (error) {
-        Swal.fire({
-          icon: "error",
-          title: "ทำรายการไม่สำเร็จ",
-          text: "กรุณาทำรายการใหม่อีกครั้ง",
-          confirmButtonText: "ตกลง",
-        });
-      }
-    }
+    } catch (error) {}
   }
 
   useEffect(() => {
