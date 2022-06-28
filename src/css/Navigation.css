@@ -35,7 +35,8 @@
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
-    z-index: 100;  
+    z-index: 100;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);  
 }
 
 .sidebar.close{
@@ -298,6 +299,7 @@ header .image-text .profession{
         width:100%;
         padding: 20px;
         /* height: auto !important; */
+        box-shadow: none; 
     }
 
     .sidebar.close ~ .container{
@@ -379,6 +381,7 @@ header .image-text .profession{
         width:100%;
         padding: 20px;
         height: auto !important;
+        box-shadow: none; 
     }
 
     .sidebar.close ~ .container{
