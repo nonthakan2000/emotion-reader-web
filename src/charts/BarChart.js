@@ -3,43 +3,37 @@ import { Bar } from "react-chartjs-2";
 
 Chart.register(CategoryScale, LinearScale, BarElement);
 
-const BarChart = () => {
+const BarChart = ({ dateOfBirth }) => {
   let data = {
     labels: [""],
     datasets: [
       {
-        label: ["อายุ 10-15"],
-        data: [9],
+        label: ["อายุ 0-14 ปี"],
+        data: [dateOfBirth[0]],
         backgroundColor: ["rgba(255, 99, 132, 1)"],
         borderWidth: 1,
       },
       {
-        label: ["อายุ 16-20"],
-        data: [4],
+        label: ["อายุ 15-24 ปี"],
+        data: [dateOfBirth[1]],
         backgroundColor: ["rgba(255, 159, 64, 1)"],
         borderWidth: 1,
       },
       {
-        label: ["อายุ 21-25"],
-        data: [12],
+        label: ["อายุ 25-59 ปี"],
+        data: [dateOfBirth[2]],
         backgroundColor: ["rgba(255, 206, 86, 1)"],
         borderWidth: 1,
       },
       {
-        label: ["อายุ 26-30"],
-        data: [19],
+        label: ["อายุ 60 ปีขึ้นไป"],
+        data: [dateOfBirth[3]],
         backgroundColor: ["rgba(75, 192, 192, 1)"],
         borderWidth: 1,
       },
       {
-        label: ["อายุ 31-35"],
-        data: [5],
-        backgroundColor: ["rgba(54, 162, 235, 1)"],
-        borderWidth: 1,
-      },
-      {
-        label: ["อายุ 35-40"],
-        data: [20],
+        label: ["ยังไม่ได้ระบุ"],
+        data: [dateOfBirth[4]],
         backgroundColor: ["#884EA0"],
         borderWidth: 1,
       },

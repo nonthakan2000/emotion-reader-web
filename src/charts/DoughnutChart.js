@@ -5,7 +5,7 @@ Chart.register(Tooltip, Legend, ArcElement);
 
 const DoughnutChart = ({ genderData }) => {
   let data = {
-    labels: ["เพศชาย", "เพศหญิง", "เพศทางเลือก"],
+    labels: ["เพศชาย", "เพศหญิง", "เพศทางเลือก", "ยังไม่ระบุ"],
     datasets: [
       {
         label: "# of Votes",
@@ -14,6 +14,7 @@ const DoughnutChart = ({ genderData }) => {
           "rgba(255, 206, 86, 1)",
           "rgba(75, 192, 192, 1)",
           "rgba(54, 162, 235, 1)",
+          "#884EA0",
         ],
         borderWidth: 1,
       },
