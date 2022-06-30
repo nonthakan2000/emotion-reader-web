@@ -3,17 +3,13 @@ import { Doughnut } from "react-chartjs-2";
 
 Chart.register(Tooltip, Legend, ArcElement);
 
-const DoughnutChart = () => {
+const DoughnutChart = ({ genderData }) => {
   let data = {
-    labels: [
-      "เพศชาย",
-      "เพศหญิง",
-      "เพศทางเลือก",
-    ],
+    labels: ["เพศชาย", "เพศหญิง", "เพศทางเลือก"],
     datasets: [
       {
         label: "# of Votes",
-        data: [12, 19, 3],
+        data: genderData,
         backgroundColor: [
           "rgba(255, 206, 86, 1)",
           "rgba(75, 192, 192, 1)",

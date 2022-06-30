@@ -2,14 +2,88 @@ import "../css/Overview.css";
 import LineChart from "../charts/LineChart";
 import BarChart from "../charts/BarChart";
 import DoughnutChart from "../charts/DoughnutChart";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+// firebase
+import { database } from "../firebase";
+import { ref as refDB, get, child } from "firebase/database";
 
 function Overview() {
+  const [googleUsers, setGoogleUsers] = useState({});
+  const [anonymousUsers, setAnonymousUsers] = useState(0);
+  const [deleteUsers, setDeleteUsers] = useState(0);
+  const [adminUsers, setAdminUsers] = useState(0);
+  const [genderData, setGenderData] = useState({});
   useEffect(() => {
     try {
       document
         .getElementById("navigatione-sidebar")
         .classList.remove("show-none");
+
+      // get googloe users
+      const dbRef = refDB(database);
+      get(child(dbRef, "Users/")).then((snapshot) => {
+        let data = {};
+        if (snapshot.exists()) {
+          data = snapshot.val();
+        }
+        const tmpData = {};
+        const totalUsers = Object.keys(data).length;
+        tmpData.totalUsers = totalUsers;
+        setGoogleUsers(tmpData);
+        // gender
+        let male = 0;
+        let female = 0;
+        let other = 0;
+        for (const user in data) {
+          const dataUser = data[user].UserData;
+          console.log(dataUser.gender);
+          switch (dataUser.gender) {
+            case "male":
+              male++;
+              break;
+            case "female":
+              female++;
+              break;
+            default:
+              other++;
+          }
+        }
+        setGenderData({ male, female, other });
+      });
+
+      // get anonymous users
+      get(child(dbRef, "Anonymous/")).then((snapshot) => {
+        let data = 0;
+        if (snapshot.exists()) {
+          data = snapshot.val();
+        }
+        setAnonymousUsers(data);
+      });
+
+      // get delete account
+      get(child(dbRef, "DeleteAccount/")).then((snapshot) => {
+        let data = {};
+        if (snapshot.exists()) {
+          data = snapshot.val();
+        }
+        setDeleteUsers(Object.keys(data).length);
+      });
+
+      // get dadmin
+      get(child(dbRef, "Admin/")).then((snapshot) => {
+        let data = [];
+        if (snapshot.exists()) {
+          const tmpData = snapshot.val();
+          for (const admin in tmpData) {
+            if (tmpData[admin].status) {
+              data.push(admin);
+            }
+          }
+        }
+
+        setAdminUsers(data.length);
+      });
     } catch (error) {}
   }, []);
   return (
@@ -23,7 +97,7 @@ function Overview() {
                 <i className="bx bx-happy index-icon"></i>
               </div>
               <div className="index-info-data">
-                <h3 className="info-data-sum">52</h3>
+                <h3 className="info-data-sum">{anonymousUsers}</h3>
                 <h5 className="info-data-text">ผู้ใช้งานแบบไม่ระบุตัวตน</h5>
               </div>
             </li>
@@ -32,7 +106,9 @@ function Overview() {
                 <i className="bx bxl-google index-icon"></i>
               </div>
               <div className="index-info-data">
-                <h3 className="info-data-sum">200</h3>
+                <h3 className="info-data-sum">
+                  {!!googleUsers.totalUsers ? googleUsers.totalUsers : 0}
+                </h3>
                 <h5 className="info-data-text">ผู้ใช้งานด้วย Google</h5>
               </div>
             </li>
@@ -41,7 +117,11 @@ function Overview() {
                 <i className="bx bxs-contact index-icon"></i>
               </div>
               <div className="index-info-data">
-                <h3 className="info-data-sum">252</h3>
+                <h3 className="info-data-sum">
+                  {!!googleUsers.totalUsers
+                    ? googleUsers.totalUsers + anonymousUsers
+                    : 0}
+                </h3>
                 <h5 className="info-data-text">ผู้ใช้งานทั้งหมด</h5>
               </div>
             </li>
@@ -50,7 +130,7 @@ function Overview() {
                 <i className="bx bx-support index-icon"></i>
               </div>
               <div className="index-info-data">
-                <h3 className="info-data-sum">2</h3>
+                <h3 className="info-data-sum">{adminUsers}</h3>
                 <h5 className="info-data-text">ผู้ดูแลระบบทั้งหมด</h5>
               </div>
             </li>
@@ -59,7 +139,7 @@ function Overview() {
                 <i className="bx bxs-trash index-icon"></i>
               </div>
               <div className="index-info-data">
-                <h3 className="info-data-sum">0</h3>
+                <h3 className="info-data-sum">{deleteUsers}</h3>
                 <h5 className="info-data-text">การลบบัญชี</h5>
               </div>
             </li>
@@ -127,13 +207,14 @@ function Overview() {
                 <DoughnutChart
                   id="index-active-chart"
                   className="index-active-chart"
+                  genderData={Object.values(genderData)}
                 />
               </div>
               <div className="chart-mobile">
                 <ul>
-                  <li>เพศชาย : 5 คน</li>
-                  <li>เพศหญิง : 20 คน</li>
-                  <li>เพศทางเลือก : 30 คน</li>
+                  <li>เพศชาย : {!!genderData.male ? genderData.male : 0} คน</li>
+                  <li>เพศหญิง : {!!genderData.female ? genderData.female : 0} คน</li>
+                  <li>เพศทางเลือก : {!!genderData.other ? genderData.other : 0} คน</li>
                 </ul>
               </div>
             </div>
