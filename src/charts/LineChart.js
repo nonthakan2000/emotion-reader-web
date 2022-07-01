@@ -9,35 +9,27 @@ import { Line } from "react-chartjs-2";
 
 Chart.register(CategoryScale, LinearScale, LineElement, PointElement);
 
-const LineChart = () => {
+const LineChart = ({ arrLabels, arrGooles, arrAnonymous, arrTotals }) => {
   let data = {
-    labels: [
-      "1 กุมภาพันธ์",
-      "2 กุมภาพันธ์",
-      "3 กุมภาพันธ์",
-      "4 กุมภาพันธ์",
-      "5 กุมภาพันธ์",
-      "6 กุมภาพันธ์",
-      "7 กุมภาพันธ์",
-    ],
+    labels: arrLabels,
     datasets: [
       {
         label: "ผู้ใช้งานด้วย Google",
-        data: [40, 30, 70, 60, 55, 20, 35],
+        data: arrGooles,
         backgroundColor: ["rgba(255, 206, 86, 1)"],
         borderColor: ["rgba(255, 206, 86, 1)"],
         borderWidth: 3,
       },
       {
         label: "ผู้ใช้งานแบบไม่ระบุตัวตน",
-        data: [20, 50, 70, 65, 23, 42, 65],
+        data: arrAnonymous,
         backgroundColor: ["rgba(75, 192, 192, 1)"],
         borderColor: ["rgba(75, 192, 192, 1)"],
         borderWidth: 3,
       },
       {
         label: "ผู้ใช้งานทั้งหมด",
-        data: [60, 80, 140, 125, 78, 62, 100],
+        data: arrTotals,
         backgroundColor: ["#695CFE"],
         borderColor: ["#695CFE"],
         borderWidth: 3,

@@ -4,9 +4,40 @@ import BarChart from "../charts/BarChart";
 import DoughnutChart from "../charts/DoughnutChart";
 import { useEffect, useState } from "react";
 
+import DatePicker from "react-date-picker";
+
 // firebase
 import { database } from "../firebase";
 import { ref as refDB, get, child } from "firebase/database";
+
+const months_th = [
+  "มกราคม",
+  "กุมภาพันธ์",
+  "มีนาคม",
+  "เมษายน",
+  "พฤษภาคม",
+  "มิถุนายน",
+  "กรกฎาคม",
+  "สิงหาคม",
+  "กันยายน",
+  "ตุลาคม",
+  "พฤศจิกายน",
+  "ธันวาคม",
+];
+const months_th_mini = [
+  "ม.ค.",
+  "ก.พ.",
+  "มี.ค.",
+  "เม.ย.",
+  "พ.ค.",
+  "มิ.ย.",
+  "ก.ค.",
+  "ส.ค.",
+  "ก.ย.",
+  "ต.ค.",
+  "พ.ย.",
+  "ธ.ค.",
+];
 
 function Overview() {
   const [googleUsers, setGoogleUsers] = useState({});
@@ -15,6 +46,66 @@ function Overview() {
   const [adminUsers, setAdminUsers] = useState(0);
   const [genderData, setGenderData] = useState({});
   const [dateOfBirthData, setDateOfBirthData] = useState([]);
+
+  const [arrLabels, setArrLabels] = useState([]);
+  const [arrGooles, setArrGooles] = useState([]);
+  const [arrAnonymous, setArrAnonymous] = useState([]);
+  const [arrTotals, setArrTotals] = useState([]);
+
+  // filter data
+  const [dateStart, setDateStart] = useState(
+    new Date(Date.now() - 7 * 86400000)
+  );
+  const [dateEnd, setDateEnd] = useState(new Date());
+  useEffect(() => {
+    function getDateNow(date) {
+      let day = "" + date.getDate(),
+        month = "" + date.getMonth(),
+        year = date.getFullYear();
+      return [day, month, year].join("-");
+    }
+    try {
+      // Unix Timestamps
+      const ustart = dateStart.getTime();
+      const uend = dateEnd.getTime();
+      const dbRef = refDB(database);
+
+      // data
+      setArrLabels([]);
+      setArrGooles([]);
+      setArrAnonymous([]);
+      setArrTotals([]);
+      for (let unix = ustart; unix <= uend; unix += 86400000) {
+        const date = new Date(unix);
+        const day = date.getDate();
+        const month = date.getMonth();
+        const dayMonth = [day, months_th[month]].join(" ");
+        setArrLabels((current) => [...current, dayMonth]);
+        const dayFormat = getDateNow(date);
+        get(child(dbRef, `LoginHistory/${dayFormat}`)).then((snapshot) => {
+          let data = {};
+          if (snapshot.exists()) {
+            data = snapshot.val();
+            const google = !!data.google ? Object.keys(data.google).length : 0;
+            const anonymous = !!data.anonymous
+              ? Object.keys(data.anonymous).length
+              : 0;
+            const total = google + anonymous;
+            setArrGooles((current) => [...current, google]);
+            setArrAnonymous((current) => [...current, anonymous]);
+            setArrTotals((current) => [...current, total]);
+          } else {
+            setArrGooles((current) => [...current, 0]);
+            setArrAnonymous((current) => [...current, 0]);
+            setArrTotals((current) => [...current, 0]);
+          }
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, [dateStart, dateEnd]);
+
   useEffect(() => {
     try {
       document
@@ -182,17 +273,22 @@ function Overview() {
               <div className="select-time-box">
                 <div className="select-time">
                   ช่วง&nbsp;
-                  <select>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                  </select>
+                  <DatePicker
+                    onChange={setDateStart}
+                    value={!!dateStart ? dateStart : new Date()}
+                    clearIcon={false}
+                    maxDate={dateEnd}
+                    format="dd/MM/y"
+                  />
                   &nbsp;ถึง&nbsp;
-                  <select>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                    <option value="">&nbsp;dd/mm/yyyy&nbsp;</option>
-                  </select>
+                  <DatePicker
+                    onChange={setDateEnd}
+                    value={!!dateEnd ? dateEnd : new Date()}
+                    clearIcon={false}
+                    minDate={dateStart}
+                    maxDate={new Date()}
+                    format="dd/MM/y"
+                  />
                 </div>
               </div>
             </div>
@@ -200,6 +296,10 @@ function Overview() {
               <LineChart
                 id="index-active-chart"
                 className="index-active-chart"
+                arrLabels={arrLabels}
+                arrGooles={arrGooles}
+                arrAnonymous={arrAnonymous}
+                arrTotals={arrTotals}
               />
             </div>
             <div className="chart-mobile">
