@@ -73,7 +73,7 @@ function Overview() {
             } else {
               dateOfBirth[3]++;
             }
-          }else{
+          } else {
             dateOfBirth[4]++;
           }
         }
@@ -113,6 +113,7 @@ function Overview() {
 
         setAdminUsers(data.length);
       });
+      // TODO: Implement login active
     } catch (error) {}
   }, []);
   return (
