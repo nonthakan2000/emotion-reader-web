@@ -45,7 +45,7 @@ function Overview() {
   const [deleteUsers, setDeleteUsers] = useState(0);
   const [adminUsers, setAdminUsers] = useState(0);
   const [genderData, setGenderData] = useState({});
-  const [dateOfBirthData, setDateOfBirthData] = useState([]);
+  const [dateOfBirthData, setDateOfBirthData] = useState([0, 0, 0, 0, 0]);
 
   const [arrLabels, setArrLabels] = useState([]);
   const [arrGooles, setArrGooles] = useState([]);
@@ -207,6 +207,13 @@ function Overview() {
       // TODO: Implement login active
     } catch (error) {}
   }, []);
+
+  function sumArray(arr) {
+    const total = arr.reduce(function (accumVariable, curValue) {
+      return accumVariable + curValue;
+    }, 0);
+    return total;
+  }
   return (
     <section className="container">
       <div className="text">ภาพรวมระบบ</div>
@@ -304,9 +311,9 @@ function Overview() {
             </div>
             <div className="chart-mobile">
               <ul>
-                <li>ผู้ใช้งานด้วย Google : 5 คน</li>
-                <li>ผู้ใช้งานแบบไม่ระบุตัวตน : 20 คน</li>
-                <li>ผู้ใช้งานทั้งหมด : 30 คน</li>
+                <li>ผู้ใช้งานด้วย Google : {sumArray(arrGooles)} คน</li>
+                <li>ผู้ใช้งานแบบไม่ระบุตัวตน : {sumArray(arrAnonymous)} คน</li>
+                <li>ผู้ใช้งานทั้งหมด : {sumArray(arrTotals)} คน</li>
               </ul>
             </div>
           </div>
@@ -322,12 +329,11 @@ function Overview() {
               </div>
               <div className="chart-mobile">
                 <ul>
-                  <li>อายุ 10-15 : 5 คน</li>
-                  <li>อายุ 16-20 : 20 คน</li>
-                  <li>อายุ 21-25 : 30 คน</li>
-                  <li>อายุ 26-30 : 5 คน</li>
-                  <li>อายุ 31-35 : 20 คน</li>
-                  <li>อายุ 35-40 : 30 คน</li>
+                  <li>อายุ 0-14 ปี : {dateOfBirthData[0]} คน</li>
+                  <li>อายุ 15-24 ปี : {dateOfBirthData[1]} คน</li>
+                  <li>อายุ 25-59 ปี : {dateOfBirthData[2]} คน</li>
+                  <li>อายุ 60 ปีขึ้นไป : {dateOfBirthData[3]} คน</li>
+                  <li>ยังไม่ได้ระบุ : {dateOfBirthData[4]} คน</li>
                 </ul>
               </div>
             </div>
@@ -349,6 +355,10 @@ function Overview() {
                   </li>
                   <li>
                     เพศทางเลือก : {!!genderData.other ? genderData.other : 0} คน
+                  </li>
+                  <li>
+                    ยังไม่ระบุ : {!!genderData.nodata ? genderData.nodata : 0}{" "}
+                    คน
                   </li>
                 </ul>
               </div>
