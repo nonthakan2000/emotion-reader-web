@@ -149,6 +149,15 @@ function History() {
     let month = parseInt(data[0]);
     let year = parseInt(data[1]);
     month += 1;
+    const dateNow = new Date();
+    const monthNow = dateNow.getMonth();
+    const yearNow = dateNow.getFullYear();
+
+    if (year >= yearNow) {
+      if (month > monthNow) {
+        return;
+      }
+    }
     if (month < 12) {
       setFilterDate(`${month}-${year}`);
     } else {
