@@ -10,7 +10,7 @@ import DatePicker from "react-date-picker";
 import { database } from "../firebase";
 import { ref as refDB, get, child } from "firebase/database";
 
-const months_th = [
+const arrayMonths = [
   "มกราคม",
   "กุมภาพันธ์",
   "มีนาคม",
@@ -24,21 +24,6 @@ const months_th = [
   "พฤศจิกายน",
   "ธันวาคม",
 ];
-const months_th_mini = [
-  "ม.ค.",
-  "ก.พ.",
-  "มี.ค.",
-  "เม.ย.",
-  "พ.ค.",
-  "มิ.ย.",
-  "ก.ค.",
-  "ส.ค.",
-  "ก.ย.",
-  "ต.ค.",
-  "พ.ย.",
-  "ธ.ค.",
-];
-
 function Overview() {
   const [googleUsers, setGoogleUsers] = useState({});
   const [anonymousUsers, setAnonymousUsers] = useState(0);
@@ -79,7 +64,7 @@ function Overview() {
         const date = new Date(unix);
         const day = date.getDate();
         const month = date.getMonth();
-        const dayMonth = [day, months_th[month]].join(" ");
+        const dayMonth = [day, arrayMonths[month]].join(" ");
         setArrLabels((current) => [...current, dayMonth]);
         const dayFormat = getDateNow(date);
         get(child(dbRef, `LoginHistory/${dayFormat}`)).then((snapshot) => {
