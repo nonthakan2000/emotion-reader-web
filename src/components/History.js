@@ -12,7 +12,7 @@ function History() {
   const [filterUsage, setFilterUsage] = useState("");
 
   const [page, setPage] = useState(0);
-  const historyPerPage = 12;
+  const historyPerPage = 15;
   const [numberOfHistoryVistited, setNumberOfHistoryVistited] = useState(
     page * historyPerPage
   );
@@ -250,7 +250,7 @@ function History() {
         <ReactPaginate
           forcePage={page}
           previousLabel={"ก่อนหน้า"}
-          nextLabel={"ถันไป"}
+          nextLabel={"ถัดไป"}
           pageCount={totalPages}
           onPageChange={changePage}
           containerClassName={"navigationButtons"}
