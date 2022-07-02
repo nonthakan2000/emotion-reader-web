@@ -31,7 +31,7 @@
 .table-box {
   background-color: #fff;
   border-radius: 8px;
-  height: 80vh;
+  height: 75vh;
   overflow-y: scroll;
   width: 100%;
 }
@@ -113,4 +113,40 @@
   text-align: center;
   opacity: 0.6;
   margin-top: 40px;
+}
+
+/* // */
+.navigationButtons {
+  width: 80%;
+  height: auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.navigationButtons a {
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  color: #111;
+  cursor: pointer;
+}
+
+.navigationButtons a:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.navigationActive a {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.navigationDisabled a,
+.navigationDisabled a:hover {
+  color: #333;
+  background: #dddddd;
 }

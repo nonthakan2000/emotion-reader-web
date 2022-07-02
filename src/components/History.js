@@ -3,12 +3,21 @@ import { useEffect, useState } from "react";
 import { database } from "../firebase";
 import { ref as refDB, get, child } from "firebase/database";
 import { getKeyHistory } from "../myfunction";
+import ReactPaginate from "react-paginate";
 
 function History() {
   const [allHistory, setAllHistory] = useState({});
   const [arrayHistory, setArrayHistory] = useState([]);
   const [filterDate, setFilterDate] = useState("");
   const [filterUsage, setFilterUsage] = useState("");
+
+  const [page, setPage] = useState(0);
+  const historyPerPage = 12;
+  const [numberOfHistoryVistited, setNumberOfHistoryVistited] = useState(
+    page * historyPerPage
+  );
+  const [totalPages, setTotalPages] = useState(0);
+
   const arrayMonths = [
     "มกราคม",
     "กุมภาพันธ์",
@@ -51,6 +60,9 @@ function History() {
   useEffect(() => {
     selectHistory(filterDate);
   }, [allHistory]);
+  useEffect(() => {
+    selectHistory(filterDate);
+  }, [filterUsage]);
 
   let arrayDay = [];
   function selectHistory(filterDate) {
@@ -74,18 +86,27 @@ function History() {
         };
         arrayHistory.push(history);
       });
-      setArrayHistory(arrayHistory);
+      const tmpArrayHistory = arrayHistory.filter((history) => {
+        try {
+          return history.usage.includes(filterUsage);
+        } catch (error) {}
+      });
+      setArrayHistory(tmpArrayHistory);
+      setPage(0);
+      setNumberOfHistoryVistited(0);
+      setTotalPages(Math.ceil(tmpArrayHistory.length / historyPerPage));
     } catch (error) {}
   }
+
+  const changePage = ({ selected }) => {
+    setPage(selected);
+    setNumberOfHistoryVistited(selected * historyPerPage);
+  };
 
   // ****
 
   const historyElements = arrayHistory
-    .filter((history) => {
-      try {
-        return history.usage.includes(filterUsage);
-      } catch (error) {}
-    })
+    .slice(numberOfHistoryVistited, numberOfHistoryVistited + historyPerPage)
     .map((history) => {
       if (!arrayDay.includes(history.day)) {
         arrayDay.push(history.day);
@@ -146,8 +167,8 @@ function History() {
     }
   }
 
-  function changeUsage(e){
-    setFilterUsage(e.target.value)
+  function changeUsage(e) {
+    setFilterUsage(e.target.value);
   }
   return (
     <section className="container">
@@ -173,14 +194,28 @@ function History() {
             <option value="ลบข้อสอบ">ลบข้อสอบ</option>
             <option value="เพิ่มคำแนะนำการใช้งาน">เพิ่มคำแนะนำการใช้งาน</option>
             <option value="ลบคำแนะนำการใช้งาน">ลบคำแนะนำการใช้งาน</option>
-            <option value="เพิ่มรูปภาพคำแนะนำการใช้งาน">เพิ่มรูปภาพคำแนะนำการใช้งาน</option>
-            <option value="ลบรูปภาพคำแนะนำการใช้งาน">ลบรูปภาพคำแนะนำการใช้งาน</option>
+            <option value="เพิ่มรูปภาพคำแนะนำการใช้งาน">
+              เพิ่มรูปภาพคำแนะนำการใช้งาน
+            </option>
+            <option value="ลบรูปภาพคำแนะนำการใช้งาน">
+              ลบรูปภาพคำแนะนำการใช้งาน
+            </option>
             <option value="แก้ไขคำแนะนำการใช้งาน">แก้ไขคำแนะนำการใช้งาน</option>
-            <option value="เพิ่มเกี่ยวกับแอปพลิเคชัน">เพิ่มเกี่ยวกับแอปพลิเคชัน</option>
-            <option value="ลบเกี่ยวกับแอปพลิเคชัน">ลบเกี่ยวกับแอปพลิเคชัน</option>
-            <option value="เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน">เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน</option>
-            <option value="ลบรูปภาพเกี่ยวกับแอปพลิเคชัน">ลบรูปภาพเกี่ยวกับแอปพลิเคชัน</option>
-            <option value="แก้ไขเกี่ยวกับแอปพลิเคชัน">แก้ไขเกี่ยวกับแอปพลิเคชัน</option>
+            <option value="เพิ่มเกี่ยวกับแอปพลิเคชัน">
+              เพิ่มเกี่ยวกับแอปพลิเคชัน
+            </option>
+            <option value="ลบเกี่ยวกับแอปพลิเคชัน">
+              ลบเกี่ยวกับแอปพลิเคชัน
+            </option>
+            <option value="เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน">
+              เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน
+            </option>
+            <option value="ลบรูปภาพเกี่ยวกับแอปพลิเคชัน">
+              ลบรูปภาพเกี่ยวกับแอปพลิเคชัน
+            </option>
+            <option value="แก้ไขเกี่ยวกับแอปพลิเคชัน">
+              แก้ไขเกี่ยวกับแอปพลิเคชัน
+            </option>
           </select>
         </div>
         <div className="table-box">
@@ -203,6 +238,18 @@ function History() {
             <div id="null-history">ยังไม่มีประวัติการใช้งาน</div>
           )}
         </div>
+        <ReactPaginate
+          forcePage={page}
+          previousLabel={"ก่อนหน้า"}
+          nextLabel={"ถันไป"}
+          pageCount={totalPages}
+          onPageChange={changePage}
+          containerClassName={"navigationButtons"}
+          previousLinkClassName={"previousButton"}
+          nextLinkClassName={"nextButton"}
+          disabledClassName={"navigationDisabled"}
+          activeClassName={"navigationActive"}
+        />
       </div>
     </section>
   );
