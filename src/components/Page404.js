@@ -13,10 +13,7 @@ function Page404() {
         <h1>
           4
           <span className="icon-error">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/725/725042.png"
-              alt=""
-            />
+            <img src="/img/sad-page404.png" alt="" />
           </span>
           4
         </h1>

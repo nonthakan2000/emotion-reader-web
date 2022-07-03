@@ -6,7 +6,6 @@ import { Link, useHistory } from "react-router-dom";
 
 import Swal from "sweetalert2";
 
-
 function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -78,10 +77,7 @@ function Login() {
           <img src="/img/img-login.jpg" alt="" />
         </div>
         <div className="login-box2">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/725/725107.png"
-              alt=""
-            />
+          <img src="/img/smile-login.png" alt="" />
           <h1>Emotion Reader</h1>
           <h3>Administrator</h3>
           <div className="login-input">
