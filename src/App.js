@@ -20,7 +20,6 @@ import AddAdmin from "./components/AddAdmin";
 import Navigation from "./components/Navigation";
 import LoadindPage from "./components/LoadindPage";
 import History from "./components/History";
-import GetIP from "./components/GetIP";
 import Swal from "sweetalert2";
 
 // css
@@ -121,7 +120,6 @@ function App() {
             component={() => <AddAdmin currentAuth={currentAuth} />}
           />
           <Route path="/history" component={History} />
-          <Route path="/getip" component={GetIP} />
           <Route path="*" component={Page404} />
         </Switch>
       </>
