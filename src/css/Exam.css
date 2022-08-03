@@ -1,275 +1,271 @@
 .container .exam {
-    margin-top: 20px;
-    display: flex;
+  margin-top: 20px;
+  display: flex;
 }
 
-.container .exam .exam-topic{
-    width: 30%;
-    margin-right: 5%;
+.container .exam .exam-topic {
+  width: 30%;
+  margin-right: 5%;
 }
 
 .container .exam .exam-mood {
-    cursor: default !important;
+  cursor: default !important;
 }
 
-.container .exam .exam-mood-link .exam-addexam{
-    list-style: none;
-    padding: 15px 30px;
-    margin-bottom: 10px;
-    background-color: #FFF;
-    border: 2px dashed #695CFE;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+.container .exam .exam-mood-link .exam-addexam {
+  list-style: none;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 2px dashed #695cfe;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.container .exam .exam-mood-link .exam-addexam:hover{
-    background-color: #695CFE;
-    color: #FFF;
-    border: 2px dashed #FFF;
+.container .exam .exam-mood-link .exam-addexam:hover {
+  background-color: #695cfe;
+  color: #fff;
+  border: 2px dashed #fff;
 }
 
-.exam-addexam{
-    list-style: none;
-    padding: 15px 30px;
-    margin-bottom: 10px;
-    background-color: #FFF;
-    border: 2px dashed #695CFE;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+.exam-addexam {
+  list-style: none;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 2px dashed #695cfe;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.exam-addexam:hover{
-    background-color: #695CFE;
-    color: #FFF;
-    border: 2px dashed #FFF;
+.exam-addexam:hover {
+  background-color: #695cfe;
+  color: #fff;
+  border: 2px dashed #fff;
 }
 
-.container .exam .exam-mood-link .exam-mood-box{
-    list-style: none;
-    padding: 15px 30px;
-    margin-bottom: 10px;
-    background-color: #FFF;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+.container .exam .exam-mood-link .exam-mood-box {
+  list-style: none;
+  padding: 15px 30px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.container .exam .exam-mood-link .exam-mood-box:hover{
-    background-color: #695CFE;
-    color: #FFF;
+.container .exam .exam-mood-link .exam-mood-box:hover {
+  background-color: #695cfe;
+  color: #fff;
 }
 
-.container .exam .exam-mood-link .exam-mood-box .mood-icon{
-    font-size: 24px;
-    margin-right: 15px;
+.container .exam .exam-mood-link .exam-mood-box .mood-icon {
+  font-size: 24px;
+  margin-right: 15px;
 }
 
-.container .exam .exam-mood-link .exam-mood-box .link-edit{
-    font-size: 24px;
-    position: absolute;
-    right: 30px;
+.container .exam .exam-mood-link .exam-mood-box .link-edit {
+  font-size: 24px;
+  position: absolute;
+  right: 30px;
 }
 
-.container .exam .exam-add{
-    width: 65%;
-    background-color: #FFF;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    overflow-y: scroll;
-    height: fit-content
+.container .exam .exam-add {
+  width: 65%;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  height: 85vh;
+  overflow-y: scroll;
 }
 
-.container .exam .exam-add .exam-addexam-box{
-    color: #695CFE;
-    font-size: 1.2rem;
-    font-weight: 500;
+.container .exam .exam-add .exam-addexam-box {
+  color: #695cfe;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.container .exam .exam-add form{
-    margin-top: 10px;
-    background-color: #F6F5FF;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
+.container .exam .exam-add form {
+  margin-top: 10px;
+  background-color: #f6f5ff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
 }
 
-.container .exam .exam-add form .exam-selectmood{
-    border-bottom: 1px solid #695CFE;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.container .exam .exam-add form .exam-selectmood {
+  border-bottom: 1px solid #695cfe;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.container .exam .exam-add form .selectmood{
-    border-radius: 5px;
-    border: 1px solid #DDD;
-    padding: 5px;
-    margin-bottom: 20px;
-    width: 50%;
+.container .exam .exam-add form .selectmood {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 50%;
 }
 
-.container .exam .exam-add form .exam-img{
-    background-color: var(--body-color);
-    width: 150px;
-    height: 200px;
-    border-radius: 8px;
-    cursor: pointer;
+.container .exam .exam-add form .exam-img {
+  background-color: var(--body-color);
+  width: 150px;
+  height: 200px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.container .exam .exam-add form .exam-addimg{
-    margin: 10px 0 20px 0;
+.container .exam .exam-add form .exam-addimg {
+  margin: 10px 0 20px 0;
 }
 
-.container .exam .exam-add form .exam-addimg .add-img{
-    border: 1px solid #695CFE;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.7rem;
-    color: #695CFE;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+.container .exam .exam-add form .exam-addimg .add-img {
+  border: 1px solid #695cfe;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  color: #695cfe;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-.container .exam .exam-add form .exam-addimg .add-img:hover{
-    background-color: #695CFE;
-    color: #FFF;
+.container .exam .exam-add form .exam-addimg .add-img:hover {
+  background-color: #695cfe;
+  color: #fff;
 }
 
-.container .exam .exam-add form button{
-    background-color: #F6F5FF;
-    border: 1px solid #695CFE;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-    color: #695CFE;
-    cursor: pointer;
-    padding: 5px 30px;
-    display: block;
-    font-size: 0.7rem;
-    margin: auto;
+.container .exam .exam-add form button {
+  background-color: #f6f5ff;
+  border: 1px solid #695cfe;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #695cfe;
+  cursor: pointer;
+  padding: 5px 30px;
+  display: block;
+  font-size: 0.7rem;
+  margin: auto;
 }
 
-.container .exam .exam-add form button:hover{
-    background-color: #695CFE;
-    color: #FFF;
+.container .exam .exam-add form button:hover {
+  background-color: #695cfe;
+  color: #fff;
 }
 
 /* -------ลิสข้อสอบเมื่อกดลูกศรลง--------- */
-.exam-moodlist .exam-mood{
-    list-style: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 10px 0;
-    background-color: #FFF;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
-
+.exam-moodlist .exam-mood {
+  list-style: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-.exam-moodlist .exam-mood:hover{
-    background-color: var(--body-color);
+.exam-moodlist .exam-mood:hover {
+  background-color: var(--body-color);
 }
 
-.exam-moodlist .exam-mood .exam-mood-img{
-    width: 100px;
-    height: 120px;
-    background-color: #b3adff;
-    border-radius: 5px;
-    margin-right: 15px;
-    cursor: pointer;
+.exam-moodlist .exam-mood .exam-mood-img {
+  width: 100px;
+  height: 120px;
+  background-color: #b3adff;
+  border-radius: 5px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
-.exam-moodlist .exam-mood .articel{
-    font-size: 0.9rem;
+.exam-moodlist .exam-mood .articel {
+  font-size: 0.9rem;
 }
 
-.exam-moodlist .exam-mood .link-edit{
-    font-size: 16px;
-    position: absolute;
-    right: 30px;
-    cursor: pointer;
+.exam-moodlist .exam-mood .link-edit {
+  font-size: 16px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
 }
-
 
 /* show image full */
 
 #box-image-full {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #bg-image-full {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(51, 51, 51, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.3);
 }
 
 #show-image-full {
-    width: auto;
-    height: 80vh;
-    z-index: 1000;
-    border-radius: 8px;
+  width: auto;
+  height: 80vh;
+  z-index: 1000;
+  border-radius: 8px;
 }
 
-
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container .exam .exam-add{
-        height: fit-content !important;
-    }
+  .container .exam .exam-add {
+    height: 85vh !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .container .exam {
-        margin-top: 0;
-        display: block;
-    }
+  .container .exam {
+    margin-top: 0;
+    display: block;
+  }
 
-    .container .exam .exam-topic{
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    .container .exam .exam-topic .exam-mood-link{
-        height: auto !important;
-    }
+  .container .exam .exam-topic {
+    width: 100%;
+    margin-right: 0;
+  }
 
-    .container .exam .exam-mood-link .exam-mood-box .link-edit{
-        transform: rotate(90deg);
-    }
+  .container .exam .exam-topic .exam-mood-link {
+    height: auto !important;
+  }
 
-    .container .exam .exam-add{
-        width: 100%;
-        padding: 12px;
-        height: 60vh !important;
-        overflow-y: scroll;
-    }
+  .container .exam .exam-mood-link .exam-mood-box .link-edit {
+    transform: rotate(90deg);
+  }
 
-    .container .exam .exam-add form .selectmood{
-        width: 100%;
-    }
+  .container .exam .exam-add {
+    width: 100%;
+    padding: 12px;
+    height: 60vh !important;
+    overflow-y: scroll;
+  }
 
-    .exam-moodlist .exam-mood .link-edit{
-        right: 15px;
-        top: 15px;
-    }
+  .container .exam .exam-add form .selectmood {
+    width: 100%;
+  }
+
+  .exam-moodlist .exam-mood .link-edit {
+    right: 15px;
+    top: 15px;
+  }
 }
