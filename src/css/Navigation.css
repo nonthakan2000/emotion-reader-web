@@ -380,8 +380,9 @@ header .image-text .profession{
         left: 0;
         width:100%;
         padding: 20px;
-        height: auto !important;
-        box-shadow: none; 
+        height: fit-content;
+        box-shadow: none;
+        overflow-y: scroll;
     }
 
     .sidebar.close ~ .container{
@@ -400,6 +401,7 @@ header .image-text .profession{
     .sidebar {
         width: 100%;
         padding: 0;
+        
         /* position: absolute; */
     }
 

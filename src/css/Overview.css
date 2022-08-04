@@ -68,14 +68,19 @@
 }
 
 .container .index .index-active .index-active-one .box-one-title h2 {
-    width: 50%;
+    width: 40%;
 }
 
 .container .index .index-active .index-active-one .box-one-title .select-time-box {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: end;
 }
+
+/* .datePicker input{
+    border-radius: 5px !important;
+    background-color: #736cbd;
+} */
 
 .container .index .index-active .index-active-two{
     width: 32%;

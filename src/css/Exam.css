@@ -84,7 +84,7 @@
     border-radius: 8px;
     padding: 20px;
     overflow-y: scroll;
-    height: fit-content
+    height: 85vh;
 }
 
 .container .exam .exam-add .exam-addexam-box{
@@ -234,7 +234,9 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .container .exam .exam-add{
-        height: fit-content !important;
+        /* height: fit-content !important; */
+        height: 80vh !important;
+        overflow: scroll;
     }
 }
 

@@ -48,7 +48,7 @@ function Navigation() {
           <div className="text logo-text">
             <span className="name">EmotionReader</span>
             <NavLink to="/profile" className="profession">
-              {(currentAuth?.email)?.substring(0, 16)}
+              {currentAuth?.email?.substring(0, 16)}
             </NavLink>
           </div>
         </div>
@@ -60,7 +60,10 @@ function Navigation() {
         <div className="menu">
           <ul className="menu-links">
             <li className="nav-link">
-              <NavLink to="/overview" activeClassName="nav-active">
+              <NavLink
+                to="/overview"
+                activeClassName="nav-active"
+              >
                 <i className="bx bx-world icon"></i>
                 <span className="text nav-text">ภาพรวมระบบ</span>
               </NavLink>
