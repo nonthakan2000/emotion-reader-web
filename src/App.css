@@ -4,3 +4,7 @@
   width: 200px;
   margin: 0 auto;
 }
+
+img {
+  object-fit: cover !important;
+}
