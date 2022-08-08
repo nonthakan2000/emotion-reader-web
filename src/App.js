@@ -53,11 +53,6 @@ function App() {
         } else {
           setIsAdmin(false);
           logOut();
-          Swal.fire({
-            title: "คุณไม่ใช่แอดมิน",
-            icon: "warning",
-            confirmButtonText: "ตกลง",
-          });
           history.push("/");
         }
       })
