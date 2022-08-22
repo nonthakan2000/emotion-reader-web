@@ -261,7 +261,7 @@ function Overview() {
         <div className="index-active">
           <div className="index-active-one">
             <div className="box-one-title">
-              <h2>ความเคลื่อนไหว</h2>
+              <h2>จำนวนผู้ใช้งานรายวัน</h2>
               <div className="select-time-box">
                 <div className="select-time">
                   ช่วง&nbsp;
