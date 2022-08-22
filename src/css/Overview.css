@@ -1,186 +1,191 @@
+.container-overview {
+  height: auto !important;
+}
 .container .index .index-bar ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: stretch;
-    align-items: stretch;
-    column-gap: 12px;
-    row-gap: 12px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: stretch;
+  align-items: stretch;
+  column-gap: 12px;
+  row-gap: 12px;
+  box-sizing: border-box;
 }
 
-.container .index .index-bar .index-infobox{
-    background-color: #FFF;
-    list-style: none;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+.container .index .index-bar .index-infobox {
+  background-color: #fff;
+  list-style: none;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-.container .index .index-bar .index-infobox .index-info-icon{
-    width: 30%;
-    background-color: #F6F5FF;
-    border-radius: 8px 0 0 8px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container .index .index-bar .index-infobox .index-info-icon {
+  width: 30%;
+  background-color: #f6f5ff;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container .index .index-bar .index-infobox .index-info-icon .index-icon{
-    font-size: 1.6rem;
-    color: #736cbd;
+.container .index .index-bar .index-infobox .index-info-icon .index-icon {
+  font-size: 1.6rem;
+  color: #736cbd;
 }
 
-.container .index .index-bar .index-infobox .index-info-data{
-    width: 70%;
-    padding: 20px 10px;
-    text-align: center;
+.container .index .index-bar .index-infobox .index-info-data {
+  width: 70%;
+  padding: 20px 10px;
+  text-align: center;
 }
 
-.container .index .index-bar .index-infobox .index-info-data .info-data-sum{
-    font-size: 2rem;
+.container .index .index-bar .index-infobox .index-info-data .info-data-sum {
+  font-size: 2rem;
 }
 
-.container .index .index-bar .index-infobox .index-info-data .info-data-text{
-    color: #9c9c9c;
-    font-size: 0.8rem;
+.container .index .index-bar .index-infobox .index-info-data .info-data-text {
+  color: #9c9c9c;
+  font-size: 0.8rem;
 }
 
 .container .index .index-active {
-    margin-top: 10px;
-    display: flex;
+  margin-top: 10px;
+  display: flex;
 }
 
-.container .index .index-active .index-active-one{
-    width: 68%;
-    margin-right: 10px;
-    background-color: #FFF;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+.container .index .index-active .index-active-one {
+  width: 68%;
+  margin-right: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-.container .index .index-active .index-active-one .box-one-title{
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+.container .index .index-active .index-active-one .box-one-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .container .index .index-active .index-active-one .box-one-title h2 {
-    width: 50%;
+  width: 50%;
 }
 
-.container .index .index-active .index-active-one .box-one-title .select-time-box {
-    width: 50%;
-    display: flex;
-    justify-content: end;
+.container
+  .index
+  .index-active
+  .index-active-one
+  .box-one-title
+  .select-time-box {
+  width: 50%;
+  display: flex;
+  justify-content: end;
 }
 
-.container .index .index-active .index-active-two{
-    width: 32%;
-    background-color: #FFF;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+.container .index .index-active .index-active-two {
+  width: 32%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
 .container .index .index-active .index-active-two .linebox {
-    border: 1px solid #736cbd;
-    border-radius: 20px;
-    margin: 5px 0;
+  border: 1px solid #736cbd;
+  border-radius: 20px;
+  margin: 5px 0;
 }
 
-.container .index .index-active .chart-mobile{
-    display: none;
+.container .index .index-active .chart-mobile {
+  display: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container .index .index-bar ul {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 12px;
-        width: 100%;
-    }
+  .container .index .index-bar ul {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+    width: 100%;
+  }
 
-    .container .index .index-box {
-        margin-top: 12px;
-        display: block;
-        height: auto;
-        padding: 12px;
-    }
+  .container .index .index-box {
+    margin-top: 12px;
+    display: block;
+    height: auto;
+    padding: 12px;
+  }
 
-    .container .index .index-active {
-        margin-top: 10px;
-        display: block;
-    }
+  .container .index .index-active {
+    margin-top: 10px;
+    display: block;
+  }
 
-    .container .index .index-active .index-active-one{
-        width: 100%;
-    }
+  .container .index .index-active .index-active-one {
+    width: 100%;
+  }
 
-    .container .index .index-active .index-active-two{
-        width: 100%;
-        margin-top: 10px;
-    }
-
+  .container .index .index-active .index-active-two {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
-@media screen and (max-width: 767px) { 
-    .container .index .index-bar ul {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        width: 100%;
-    }
+@media screen and (max-width: 767px) {
+  .container .index .index-bar ul {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    width: 100%;
+  }
 
-    .container .index .index-box {
-        margin-top: 12px;
-        display: block;
-        height: auto;
-        padding: 12px;
-    }
+  .container .index .index-box {
+    margin-top: 12px;
+    display: block;
+    height: auto;
+    padding: 12px;
+  }
 
-    .container .index .index-active {
-        margin-top: 10px;
-        display: block;
-    }
+  .container .index .index-active {
+    margin-top: 10px;
+    display: block;
+  }
 
-    .container .index .index-active .index-active-one{
-        width: 100%;
-    }
+  .container .index .index-active .index-active-one {
+    width: 100%;
+  }
 
-    .container .index .index-active .index-active-one .box-one-title{
-        display: block;
-        margin-bottom: 3px;
-    }
+  .container .index .index-active .index-active-one .box-one-title {
+    display: block;
+    margin-bottom: 3px;
+  }
 
-    .container .index .index-active .chart {
-        display: none;
-    }
+  .container .index .index-active .chart {
+    display: none;
+  }
 
-    .container .index .index-active .chart-mobile{
-        margin-top: 10px;
-        padding-left: 20px;
-        display: block;
-    }
+  .container .index .index-active .chart-mobile {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: block;
+  }
 
-    .container .index .index-active .index-active-one .box-one-title h2 {
-        width: 100%;
-    }
+  .container .index .index-active .index-active-one .box-one-title h2 {
+    width: 100%;
+  }
 
-    .container .index .index-active .index-active-one .box-one-title .select-time-box {
-        width: 100%;
-        display: block;
-    }
+  .container
+    .index
+    .index-active
+    .index-active-one
+    .box-one-title
+    .select-time-box {
+    width: 100%;
+    display: block;
+  }
 
-    .container .index .index-active .index-active-two {
-        width: 100%;
-        margin-top: 10px;
-    }
-
+  .container .index .index-active .index-active-two {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
-
-
-
-
-
-

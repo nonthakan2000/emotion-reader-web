@@ -200,7 +200,7 @@ function Overview() {
     return total;
   }
   return (
-    <section className="container">
+    <section className="container container-overview">
       <div className="text">ภาพรวมระบบ</div>
       <div className="index">
         <div className="index-bar">
