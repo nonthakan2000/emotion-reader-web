@@ -110,8 +110,8 @@ function Exam() {
             getExam();
             // add history
             addHistory(
-              currentAuth.uid,
-              currentAuth.email,
+              currentAuth?.uid,
+              currentAuth?.email,
               "เพิ่มข้อสอบ",
               `เพิ่มข้อสอบของอารมณ์${emotional[aws]}`
             );
@@ -197,7 +197,14 @@ function Exam() {
   );
 
   function selectEditExam(eid, title) {
-    setShowFrom(<ExamItem exam={exam[eid]} title={title} getExam={getExam} currentAuth={currentAuth}/>);
+    setShowFrom(
+      <ExamItem
+        exam={exam[eid]}
+        title={title}
+        getExam={getExam}
+        currentAuth={currentAuth}
+      />
+    );
   }
 
   return (

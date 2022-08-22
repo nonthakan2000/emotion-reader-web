@@ -12,17 +12,12 @@ import {
 import { addHistory } from "../myfunction";
 
 import Swal from "sweetalert2";
+import { useAuth } from "../firebase";
 
 function ManualItem(props) {
-  const {
-    data,
-    index,
-    getAboutData,
-    setShowFrom,
-    setAboutData,
-    aboutData,
-    currentAuth,
-  } = props;
+  const currentAuth = useAuth();
+  const { data, index, getAboutData, setShowFrom, setAboutData, aboutData } =
+    props;
   const topic = useRef(data?.topic);
   const description = useRef("");
   const [fullImage, setFullImage] = useState(null);
@@ -68,8 +63,8 @@ function ManualItem(props) {
                     );
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "ลบรูปภาพคำแนะนำการใช้งาน",
                       `ลบรูปภาพคำแนะนำการใช้งาน ${data?.topic}`
                     );
@@ -191,8 +186,8 @@ function ManualItem(props) {
                     );
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "เพิ่มรูปภาพคำแนะนำการใช้งาน",
                       `เพิ่มรูปภาพคำแนะนำการใช้งาน ${data?.topic}`
                     );
@@ -257,8 +252,8 @@ function ManualItem(props) {
             });
             // add history
             addHistory(
-              currentAuth.uid,
-              currentAuth.email,
+              currentAuth?.uid,
+              currentAuth?.email,
               "ลบคำแนะนำการใช้งาน",
               `ลบคำแนะนำการใช้งาน ${getTopic}`
             );
@@ -322,8 +317,8 @@ function ManualItem(props) {
 
                 // add history
                 addHistory(
-                  currentAuth.uid,
-                  currentAuth.email,
+                  currentAuth?.uid,
+                  currentAuth?.email,
                   "แก้ไขคำแนะนำการใช้งาน",
                   `แก้ไขคำอธิบายคำแนะนำการใช้งาน ${data?.topic}`
                 );

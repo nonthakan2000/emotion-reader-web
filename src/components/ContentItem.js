@@ -61,8 +61,8 @@ function ContentItem(props) {
 
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "ลบรูปภาพเนื้อหา",
                       `ลบรูปภาพเนื้อหาของอารมณ์${emotional.emotion}`
                     );
@@ -190,8 +190,8 @@ function ContentItem(props) {
 
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "เพิ่มรูปภาพเนื้อหา",
                       `เพิ่มรูปภาพเนื้อหาของอารมณ์${emotional.emotion}`
                     );
@@ -259,8 +259,8 @@ function ContentItem(props) {
 
           // add history
           addHistory(
-            currentAuth.uid,
-            currentAuth.email,
+            currentAuth?.uid,
+            currentAuth?.email,
             "แก้ไขเนื้อหา",
             `แก้ไขเนื้อหาของอารมณ์${emotional.emotion}`
           );

@@ -1,4 +1,3 @@
-
 import { signIn, changePassword } from "../firebase";
 import "../css/ChangePassword.css";
 import { Link } from "react-router-dom";
@@ -24,7 +23,7 @@ function ChangePassword(props) {
       return;
     }
     try {
-      await signIn(currentAuth.email, passwordOld.current.value);
+      await signIn(currentAuth?.email, passwordOld.current.value);
       await changePassword(passwordNew.current.value);
       Swal.fire({
         title: "เปลี่ยนรหัสผ่านสำเร็จ",
@@ -57,7 +56,7 @@ function ChangePassword(props) {
     <section className="container">
       <div className="text">แก้ไขรหัสผ่าน</div>
       <div className="changepass">
-      <img
+        <img
           src="https://cdn-icons-png.flaticon.com/512/3039/3039427.png"
           alt=""
         />

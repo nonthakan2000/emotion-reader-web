@@ -329,7 +329,7 @@ function AddAdmin(props) {
           .then((snapshot) => {
             if (snapshot.exists()) {
               const data = snapshot.val();
-              if (!data.status && currentAuth.email !== data.email) {
+              if (!data.status && currentAuth?.email !== data.email) {
                 setShowFrom(
                   <div className="newadmin">
                     <div>

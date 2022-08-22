@@ -102,7 +102,6 @@ function About() {
         setShowFrom={setShowFrom}
         setAboutData={setAboutData}
         aboutData={aboutData}
-        currentAuth={currentAuth}
       />
     );
   }

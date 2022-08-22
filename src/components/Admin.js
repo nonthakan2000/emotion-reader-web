@@ -39,8 +39,8 @@ function Admin(props) {
                   });
                   // add history
                   addHistory(
-                    currentAuth.uid,
-                    currentAuth.email,
+                    currentAuth?.uid,
+                    currentAuth?.email,
                     "เพิ่มผู้ดูแลระบบ",
                     `เพิ่ม ${email} เป็นผู้ดูแลระบบ`
                   );
@@ -106,7 +106,7 @@ function Admin(props) {
           });
 
           arrAdmin.forEach(function (admin, i) {
-            if (admin.key === currentAuth.uid) {
+            if (admin.key === currentAuth?.uid) {
               arrAdmin.splice(i, 1);
               arrAdmin.unshift(admin);
             }
@@ -138,7 +138,7 @@ function Admin(props) {
   }, []);
 
   function deleteAdmin(uid, email) {
-    if (uid !== currentAuth.uid) {
+    if (uid !== currentAuth?.uid) {
       Swal.fire({
         title: "ยืนยันการลบผู้ดูแลระบบ",
         text: "กรุณาใสรหัสผ่านของคุณ",
@@ -149,7 +149,7 @@ function Admin(props) {
       }).then((result) => {
         if (result.isConfirmed) {
           let password = result.value;
-          signIn(currentAuth.email, password)
+          signIn(currentAuth?.email, password)
             .then(() => {
               set(refDB(database, `Admin/${uid}/status`), false)
                 .then(() => {
@@ -162,8 +162,8 @@ function Admin(props) {
 
                   // add history
                   addHistory(
-                    currentAuth.uid,
-                    currentAuth.email,
+                    currentAuth?.uid,
+                    currentAuth?.email,
                     "ลบผู้ดูแลระบบ",
                     `ลบ ${email} ออกจากการเป็นผู้ดูแลระบบ`
                   );

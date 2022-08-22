@@ -38,8 +38,8 @@ function ExamItem(props) {
                 });
                 // add history
                 addHistory(
-                  currentAuth.uid,
-                  currentAuth.email,
+                  currentAuth?.uid,
+                  currentAuth?.email,
                   "ลบข้อสอบ",
                   `ลบข้อสอบของอารมณ์${title}`
                 );

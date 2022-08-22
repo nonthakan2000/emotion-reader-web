@@ -101,7 +101,6 @@ function Manual() {
         setShowFrom={setShowFrom}
         setAboutData={setAboutData}
         aboutData={aboutData}
-        currentAuth={currentAuth}
       />
     );
   }
@@ -242,8 +241,8 @@ function Manual() {
 
     // add history
     addHistory(
-      currentAuth.uid,
-      currentAuth.email,
+      currentAuth?.uid,
+      currentAuth?.email,
       "เพิ่มคำแนะนำการใช้งาน",
       `เพิ่มคำแนะนำการใช้งาน ${getTopic}`
     );

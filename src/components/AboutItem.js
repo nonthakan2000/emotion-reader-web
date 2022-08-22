@@ -11,17 +11,12 @@ import {
 
 import Swal from "sweetalert2";
 import { addHistory } from "../myfunction";
+import { useAuth } from "../firebase";
 
 function AboutItem(props) {
-  const {
-    data,
-    index,
-    getAboutData,
-    setShowFrom,
-    setAboutData,
-    aboutData,
-    currentAuth,
-  } = props;
+  const currentAuth = useAuth();
+  const { data, index, getAboutData, setShowFrom, setAboutData, aboutData } =
+    props;
   const topic = useRef(data?.topic);
   const description = useRef("");
   const [fullImage, setFullImage] = useState(null);
@@ -67,8 +62,8 @@ function AboutItem(props) {
                     );
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "ลบรูปภาพเกี่ยวกับแอปพลิเคชัน",
                       `ลบรูปภาพเกี่ยวกับแอปพลิเคชัน ${data?.topic}`
                     );
@@ -187,8 +182,8 @@ function AboutItem(props) {
 
                     // add history
                     addHistory(
-                      currentAuth.uid,
-                      currentAuth.email,
+                      currentAuth?.uid,
+                      currentAuth?.email,
                       "เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน",
                       `เพิ่มรูปภาพเกี่ยวกับแอปพลิเคชัน ${data?.topic}`
                     );
@@ -256,8 +251,8 @@ function AboutItem(props) {
 
             // add history
             addHistory(
-              currentAuth.uid,
-              currentAuth.email,
+              currentAuth?.uid,
+              currentAuth?.email,
               "ลบเกี่ยวกับแอปพลิเคชัน",
               `ลบเกี่ยวกับแอปพลิเคชัน ${getTopic}`
             );
@@ -320,8 +315,8 @@ function AboutItem(props) {
                   "อัปเดตล่าสุดเมื่อ " + dateTime;
                 // add history
                 addHistory(
-                  currentAuth.uid,
-                  currentAuth.email,
+                  currentAuth?.uid,
+                  currentAuth?.email,
                   "แก้ไขเกี่ยวกับแอปพลิเคชัน",
                   `แก้ไขคำอธิบายเกี่ยวกับแอปพลิเคชัน ${data?.topic}`
                 );
