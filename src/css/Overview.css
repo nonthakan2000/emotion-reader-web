@@ -2,7 +2,7 @@
   height: 108vh !important;
 }
 .container .index .index-bar {
-  width: calc(100% + 10px);
+  width: 100%;
 }
 
 .container .index .index-bar ul {
