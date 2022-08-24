@@ -106,18 +106,18 @@
   #show-month-year {
     width: 50%;
   }
-}
-
-#null-history {
-  width: 100%;
-  text-align: center;
-  opacity: 0.6;
-  margin-top: 40px;
+  
+  #null-history {
+    width: 100%;
+    text-align: center;
+    opacity: 0.6;
+    margin-top: 40px;
+  }
 }
 
 /* // */
 .navigationButtons {
-  width: 80%;
+  width: 100%;
   height: auto;
   list-style: none;
   display: flex;
@@ -127,12 +127,13 @@
 }
 
 .navigationButtons a {
-  padding: 6px 12px;
+  padding: 6px 8px;
   margin: 0 5px;
   border-radius: 8px;
   border: 1px solid var(--primary-color);
   color: #111;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .navigationButtons a:hover {
