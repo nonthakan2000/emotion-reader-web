@@ -106,15 +106,13 @@
   #show-month-year {
     width: 50%;
   }
-  
-  #null-history {
-    width: 100%;
-    text-align: center;
-    opacity: 0.6;
-    margin-top: 40px;
-  }
 }
-
+#null-history {
+  width: 100%;
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 40px;
+}
 /* // */
 .navigationButtons {
   width: 100%;
