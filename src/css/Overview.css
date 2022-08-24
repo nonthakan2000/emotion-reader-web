@@ -43,6 +43,7 @@
   width: 70%;
   padding: 20px 10px;
   text-align: center;
+  position: relative;
 }
 
 .container .index .index-bar .index-infobox .index-info-data .info-data-sum {
@@ -52,6 +53,53 @@
 .container .index .index-bar .index-infobox .index-info-data .info-data-text {
   color: #9c9c9c;
   font-size: 0.8rem;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .boxtooltrip {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip {
+  position: relative;
+  display: inline-block;
+  color: #9c9c9c;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #9c9c9c;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #9c9c9c transparent transparent transparent;
+}
+
+.container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .container .index .index-active {
@@ -75,7 +123,7 @@
 }
 
 .container .index .index-active .index-active-one .box-one-title h2 {
-  width: 50%;
+  width: 40%;
 }
 
 .container
@@ -84,7 +132,7 @@
   .index-active-one
   .box-one-title
   .select-time-box {
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: end;
 }

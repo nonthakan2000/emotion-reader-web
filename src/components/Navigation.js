@@ -43,12 +43,13 @@ function Navigation() {
               src="https://cdn-icons-png.flaticon.com/512/725/725107.png"
               alt=""
             />
+            {/* <img src="/img/logo.png" alt="" /> */}
           </span>
 
           <div className="text logo-text">
-            <span className="name">EmotionReader</span>
+            <span className="name">Emotion Reader</span>
             <NavLink to="/profile" className="profession">
-              {(currentAuth?.email)?.substring(0, 16)}
+              {currentAuth?.email?.substring(0, 16)}
             </NavLink>
           </div>
         </div>

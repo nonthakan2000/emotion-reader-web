@@ -212,6 +212,13 @@ function Overview() {
               <div className="index-info-data">
                 <h3 className="info-data-sum">{anonymousUsers}</h3>
                 <h5 className="info-data-text">ผู้ใช้งานแบบไม่ระบุตัวตน</h5>
+                <div className="boxtooltrip">
+                  <i className="bx bx-info-circle tooltip">
+                    <span class="tooltiptext">
+                      บัญชีแบบไม่ระบุตัวตน โดยนับตามเลข ip เครื่องที่เข้าใช้งาน เมื่อกดออกจากระบบบัญชีจะโดนลบ
+                    </span>
+                  </i>
+                </div>
               </div>
             </li>
             <li className="index-infobox">
@@ -223,6 +230,13 @@ function Overview() {
                   {!!googleUsers.totalUsers ? googleUsers.totalUsers : 0}
                 </h3>
                 <h5 className="info-data-text">ผู้ใช้งานด้วย Google</h5>
+                <div className="boxtooltrip">
+                  <i className="bx bx-info-circle tooltip">
+                    <span class="tooltiptext">
+                      บัญชี Google โดยนับตามบัญชีที่เข้าใช้งานโดย Google
+                    </span>
+                  </i>
+                </div>
               </div>
             </li>
             <li className="index-infobox">
@@ -236,6 +250,14 @@ function Overview() {
                     : 0}
                 </h3>
                 <h5 className="info-data-text">ผู้ใช้งานทั้งหมด</h5>
+                <div className="boxtooltrip">
+                  <i className="bx bx-info-circle tooltip">
+                    <span class="tooltiptext">
+                      บัญชีผู้ใช้งานทั้งหมด
+                      โดยนับตามบัญชีที่เข้าแบบไม่ระบุตัวตนและบัญชี Google
+                    </span>
+                  </i>
+                </div>
               </div>
             </li>
             <li className="index-infobox">
@@ -245,6 +267,13 @@ function Overview() {
               <div className="index-info-data">
                 <h3 className="info-data-sum">{adminUsers}</h3>
                 <h5 className="info-data-text">ผู้ดูแลระบบทั้งหมด</h5>
+                <div className="boxtooltrip">
+                  <i className="bx bx-info-circle tooltip">
+                    <span class="tooltiptext">
+                      บัญชีของผู้ดูแลระบบทั้งหมด
+                    </span>
+                  </i>
+                </div>
               </div>
             </li>
             <li className="index-infobox">
@@ -254,6 +283,13 @@ function Overview() {
               <div className="index-info-data">
                 <h3 className="info-data-sum">{deleteUsers}</h3>
                 <h5 className="info-data-text">การลบบัญชี</h5>
+                <div className="boxtooltrip">
+                  <i className="bx bx-info-circle tooltip">
+                    <span class="tooltiptext">
+                      การลบบัญชี โดยนับตามผู้ใช้งานที่ลบบัญชี
+                    </span>
+                  </i>
+                </div>
               </div>
             </li>
           </ul>
@@ -318,7 +354,7 @@ function Overview() {
                   <li>อายุ 15-24 ปี : {dateOfBirthData[1]} คน</li>
                   <li>อายุ 25-59 ปี : {dateOfBirthData[2]} คน</li>
                   <li>อายุ 60 ปีขึ้นไป : {dateOfBirthData[3]} คน</li>
-                  <li>ยังไม่ได้ระบุ : {dateOfBirthData[4]} คน</li>
+                  <li>ยังไม่ระบุ : {dateOfBirthData[4]} คน</li>
                 </ul>
               </div>
             </div>
