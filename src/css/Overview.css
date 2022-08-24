@@ -70,11 +70,11 @@
 .container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip .tooltiptext {
   visibility: hidden;
   width: 160px;
-  background-color: #9c9c9c;
+  background-color: #0B1641;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 8px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -94,7 +94,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #9c9c9c transparent transparent transparent;
+  border-color: #0B1641 transparent transparent transparent;
 }
 
 .container .index .index-bar .index-infobox .index-info-data .boxtooltrip .tooltip:hover .tooltiptext {
