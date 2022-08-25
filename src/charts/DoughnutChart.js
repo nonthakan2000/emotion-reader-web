@@ -5,7 +5,7 @@ Chart.register(Tooltip, Legend, ArcElement);
 
 const DoughnutChart = ({ genderData }) => {
   let data = {
-    labels: ["เพศชาย", "เพศหญิง", "เพศทางเลือก", "ยังไม่ระบุ"],
+    labels: ["เพศชาย", "เพศหญิง", "เพศอื่น ๆ", "ยังไม่ระบุ"],
     datasets: [
       {
         label: "# of Votes",

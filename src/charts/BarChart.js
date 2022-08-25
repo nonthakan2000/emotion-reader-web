@@ -32,7 +32,7 @@ const BarChart = ({ dateOfBirth }) => {
         borderWidth: 1,
       },
       {
-        label: ["ยังไม่ได้ระบุ"],
+        label: ["ยังไม่ระบุ"],
         data: [dateOfBirth[4]],
         backgroundColor: ["#884EA0"],
         borderWidth: 1,

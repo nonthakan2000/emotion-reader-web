@@ -105,6 +105,27 @@ function History() {
 
   // ****
 
+  const hiddenIP = (ipAddress) => {
+    const arrayIPAddress = ipAddress.split("");
+    let isShow = "";
+    let prefix = 2;
+    for (let i = 0; i < arrayIPAddress.length; i++) {
+      if (prefix > 0) {
+        isShow += arrayIPAddress[i];
+        if (arrayIPAddress[i] === ".") {
+          prefix--;
+        }
+      } else {
+        if (arrayIPAddress[i] === ".") {
+          isShow += arrayIPAddress[i];
+        } else {
+          isShow += "X";
+        }
+      }
+    }
+    return isShow;
+  };
+
   const historyElements = arrayHistory
     .slice(numberOfHistoryVistited, numberOfHistoryVistited + historyPerPage)
     .map((history) => {
@@ -116,7 +137,7 @@ function History() {
             <td>{history.time}</td>
             <td>{history.usage}</td>
             <td>{history.email}</td>
-            <td>{history.ipAddress}</td>
+            <td>{hiddenIP(history.ipAddress)}</td>
             <td>{history.description}</td>
           </tr>
         );
@@ -127,7 +148,7 @@ function History() {
             <td>{history.time}</td>
             <td>{history.usage}</td>
             <td>{history.email}</td>
-            <td>{history.ipAddress}</td>
+            <td>{hiddenIP(history.ipAddress)}</td>
             <td>{history.description}</td>
           </tr>
         );
@@ -179,6 +200,7 @@ function History() {
   function changeUsage(e) {
     setFilterUsage(e.target.value);
   }
+
   return (
     <section className="container">
       <div className="text">ประวัติการใช้งาน</div>
