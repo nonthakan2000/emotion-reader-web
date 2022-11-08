@@ -303,6 +303,7 @@ function EditProfile(props) {
                     type="text"
                     name="firstname"
                     placeholder="ชื่อ"
+                    pattern="[A-Za-zก-ฮะัาำิีึืฺุูเแโใไๅๆ็่้๊๋์่้๊๋]*"
                     required
                   />
                 </div>
@@ -312,6 +313,7 @@ function EditProfile(props) {
                     type="text"
                     name="lastname"
                     placeholder="นามสกุล"
+                    pattern="[A-Za-zก-ฮะัาำิีึืฺุูเแโใไๅๆ็่้๊๋์่้๊๋]*"
                     required
                   />
                 </div>

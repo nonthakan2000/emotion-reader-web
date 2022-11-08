@@ -119,7 +119,7 @@ function History() {
         if (arrayIPAddress[i] === ".") {
           isShow += arrayIPAddress[i];
         } else {
-          isShow += "X";
+          isShow += "x";
         }
       }
     }
