@@ -59,7 +59,7 @@ function Login() {
           emailRef.current.value = "";
           // alert(`ระบบได้ส่งลิงค์การรีเซ็ตระรัสผ่านไปที่ ${email} กรุณาตรวบสอบอีเมล`);
           Swal.fire({
-            text: `ระบบได้ส่งลิงค์การรีเซ็ตระรัสผ่านไปที่ ${email} กรุณาตรวบสอบอีเมล`,
+            text: `ระบบได้ส่งลิงค์การรีเซ็ตรหัสผ่านไปที่ ${email} กรุณาตรวบสอบอีเมล`,
             icon: "success",
             confirmButtonText: "ตกลง",
           });
@@ -87,6 +87,7 @@ function Login() {
                 type="email"
                 name=""
                 placeholder="อีเมล"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                 required
               />
               <br />

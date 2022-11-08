@@ -78,7 +78,7 @@ function AddAdmin(props) {
                           set(refDB(database, `Admin/${uid}`), adminNew)
                             .then(() => {
                               Swal.fire({
-                                title: "สมัครแอดมินสำเร็จ",
+                                title: "สมัครผู้ดูแลระบบสำเร็จสำเร็จ",
                                 icon: "success",
                                 confirmButtonText: "ตกลง",
                               });
@@ -124,7 +124,7 @@ function AddAdmin(props) {
                 set(refDB(database, `InviteAdmin/${key}/status`), true)
                   .then(() => {
                     Swal.fire({
-                      title: "สมัครแอดมินสำเร็จ",
+                      title: "สมัครผู้ดูแลระบบสำเร็จ",
                       icon: "success",
                       confirmButtonText: "ตกลง",
                     });

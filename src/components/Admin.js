@@ -34,7 +34,7 @@ function Admin(props) {
                 .then(() => {
                   Swal.fire({
                     icon: "success",
-                    text: `ระบบได้ส่งลิงค์การเป็นแอดมินไปที่ ${email} กรุณาตรวบสอบอีเมล`,
+                    text: `ระบบได้ส่งลิงค์การเป็นผู้ดูแลระบบไปที่ ${email} กรุณาตรวบสอบอีเมล`,
                     confirmButtonText: "ตกลง",
                   });
                   // add history
